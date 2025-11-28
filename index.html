@@ -11,20 +11,31 @@
         <h1>เครื่องคำนวณดัชนีทางการแพทย์</h1>
     </header>
 
-    <div class="calculator-container">
-    <form id="ga-form">
-        <label for="lmp-date">วันแรกของการมีประจำเดือนครั้งสุดท้าย (LMP):</label>
-        <input type="date" id="lmp-date" required> 
+    <div class="calculator-container shadow p-4">
+    <header>
+        <h1 class="text-primary mb-4">เครื่องคำนวณอายุครรภ์ (GA)</h1>
+    </header>
 
-        <button type="submit">คำนวณอายุครรภ์</button>
+    <form id="ga-form">
+        <div class="mb-3 text-start">
+            <label for="lmp-date" class="form-label">1. วันแรกของประจำเดือนครั้งสุดท้าย (LMP):</label>
+            <input type="date" id="lmp-date" class="form-control" required> 
+        </div>
+
+        <div class="mb-3 text-start">
+            <label for="ref-date" class="form-label">2. วันอ้างอิง / วันที่ตรวจ:</label>
+            <input type="date" id="ref-date" class="form-control" required> 
+        </div>
+        
+        <button type="submit" class="btn btn-success btn-lg mt-3 w-100">คำนวณ GA และ EDD</button>
     </form>
 
-    <div id="result">
+    <div id="result" class="mt-4 p-3 border rounded">
         <h3>ผลการคำนวณ</h3>
-        <p>อายุครรภ์ (GA): <span id="ga-value">-- สัปดาห์ -- วัน</span></p>
-        <p>วันครบกำหนดคลอด (EDD): <span id="edd-value">--/--/----</span></p>
+        <p class="h5">อายุครรภ์ (GA): <span id="ga-value" class="fw-bold text-success">-- สัปดาห์ -- วัน</span></p>
+        <p class="h6">วันครบกำหนดคลอด (EDD): <span id="edd-value" class="fw-bold text-info">--/--/----</span></p>
     </div>
-    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
