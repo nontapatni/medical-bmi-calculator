@@ -1,0 +1,64 @@
+/* ---------------------------------------------------- */
+/* Global Styles: จัดวางและกำหนด Font/Background */
+/* ---------------------------------------------------- */
+
+body {
+    /* ใช้ Font ที่อ่านง่าย */
+    font-family: 'Mitr', sans-serif;
+    /* สีพื้นหลังอ่อน ๆ (คล้ายสีฟ้าทางการแพทย์) */
+    background-color: #e9f5ff; 
+    
+    /* Center Layout: จัดกล่องคำนวณให้อยู่กึ่งกลางหน้าจอ */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* ---------------------------------------------------- */
+/* Calculator Container Styles */
+/* ---------------------------------------------------- */
+.calculator-container {
+    font-family: 'Prompt', sans-serif;
+    background-color: #ffffff; /* กล่องคำนวณสีขาว */
+    border-radius: 15px; /* ขอบโค้งมนมากขึ้น */
+    width: 100%;
+    max-width: 480px; /* เพิ่มความกว้างเล็กน้อย */
+    
+    /* จัดสไตล์เงาของกล่อง */
+    box-shadow: 0 10px 30px rgba(0, 50, 100, 0.1); 
+}
+
+/* ---------------------------------------------------- */
+/* Header & Result Styles (ปรับจาก Bootstrap เพิ่มเติม) */
+/* ---------------------------------------------------- */
+.calculator-container h1 {
+    /* ปรับให้ดูเป็นทางการมากขึ้น */
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700; 
+    font-size: 1.8rem;
+    color: #007bff !important; /* ยืนยันให้เป็นสีหลักของ Bootstrap */
+}
+
+/* จัดสไตล์ส่วนแสดงผล */
+#result {
+    /* สีพื้นหลังอ่อนๆ สำหรับส่วนแสดงผล */
+    background-color: #f8f9fa; 
+    border: 1px solid #dee2e6 !important;
+    border-radius: 10px !important;
+}
+
+#result h3 {
+    font-family: 'Prompt', sans-serif;
+    color: #495057;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ced4da; /* ขีดเส้นใต้ผลลัพธ์ */
+    padding-bottom: 5px;
+}
+
+/* เน้นผลลัพธ์ที่เป็นตัวเลขและวันที่ */
+#ga-value, #edd-value {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px; /* เพิ่มระยะห่างตัวอักษรเล็กน้อย */
+}
