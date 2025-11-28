@@ -12,22 +12,20 @@
     </header>
 
     <div class="calculator-container">
-        <form id="bmi-form">
-            <label for="weight">น้ำหนัก (kg):</label>
-            <input type="number" id="weight" step="0.1" required>
+    <form id="ga-form">
+        <label for="lmp-date">วันแรกของการมีประจำเดือนครั้งสุดท้าย (LMP):</label>
+        <input type="date" id="lmp-date" required> 
 
-            <label for="height">ส่วนสูง (m):</label>
-            <input type="number" id="height" step="0.01" required>
+        <button type="submit">คำนวณอายุครรภ์</button>
+    </form>
 
-            <button type="submit">คำนวณ BMI</button>
-        </form>
-
-        <div id="result">
-            <p>ผลลัพธ์ BMI: <span id="bmi-value">--</span></p>
-            <p>การแปลผล: <span id="bmi-status">--</span></p>
-        </div>
+    <div id="result">
+        <h3>ผลการคำนวณ</h3>
+        <p>อายุครรภ์ (GA): <span id="ga-value">-- สัปดาห์ -- วัน</span></p>
+        <p>วันครบกำหนดคลอด (EDD): <span id="edd-value">--/--/----</span></p>
+    </div>
     </div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
